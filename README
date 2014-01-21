@@ -1,1 +1,3 @@
 bot-block v.0.1
+
+This repository contains my own statistic for hosts which brutforsing ssh and sftp ports and spam email. It can be used to block all off them quickly via firewall.

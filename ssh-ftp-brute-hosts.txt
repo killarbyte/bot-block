@@ -1,1 +1,1 @@
-95.76.161.61 [brutforce sftp and ssh] [romania] 1
+95.76.161.61 [romania] [ssh and sftp]
