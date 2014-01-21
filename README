@@ -1,3 +1,28 @@
 bot-block v.0.1
 
 This repository contains my own statistic for hosts which brutforsing ssh and sftp ports and spam email. It can be used to block all off them quickly via firewall.
+
+
+Simple way to block all of them via ipset
+
+1) create a ruleset:
+ipset -N dropip iphash
+
+2) insert a ruleset to iptables
+iptables -A INPUT -m set --set dropip src -j DROP
+
+3) download a .txt from a repo
+
+4) type in bash:
+for i in $( cat /.../bots.txt ) ; do ipset -A dropip $i ; done
+
+4) save your ruleset with
+ipset -S > /etc/ipset/ipset-save
+
+
+
+if u want to flush all rules just type
+ipset -F
+
+u can make this via cron
+*/5 * * * * ipset -F
